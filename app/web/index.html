@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星火 · 全屋智能终端</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-state="idle" data-mode="spark">
+<header>
+  <div class="brand">星火 <span>全屋智能终端</span></div>
+  <nav class="tabs">
+    <button id="tab-spark" class="tab active">星火模式</button>
+    <button id="tab-chat" class="tab">聊天记录</button>
+  </nav>
+  <div class="tools">
+    <button id="tts-toggle" class="tool" title="语音播报开关">🔊 播报</button>
+    <button id="mic" class="tool" title="语音输入">🎤</button>
+  </div>
+</header>
+
+<main>
+  <section id="spark-view">
+    <canvas id="spark" width="440" height="440"></canvas>
+    <div id="state-label">空闲</div>
+    <div id="spark-hint"></div>
+  </section>
+
+  <section id="chat-view">
+    <div id="messages"></div>
+    <div id="progress"></div>
+  </section>
+</main>
+
+<div id="confirm-bar" hidden>
+  <span id="confirm-prompt"></span>
+  <button id="confirm-yes" class="primary">确认执行</button>
+  <button id="confirm-no">取消</button>
+</div>
+
+<footer>
+  <input id="input" placeholder="试试:把客厅灯调到50% / 启动离家模式 / 你记住了我什么" autocomplete="off">
+  <button id="send" class="primary">发送</button>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
